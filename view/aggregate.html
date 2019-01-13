@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>MJ Score Table</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../css/pulgin/normalize.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/aggregate.css" />
+	<link rel="stylesheet" href="../css/pulgin/jquery.mCustomScrollbar.css" />
+	<script type="text/javascript"  src="../scripts/pulgin/jquery-1.11.3.min.js" ></script>
+	<script type="text/javascript"  src="../scripts/pulgin/jquery.mCustomScrollbar.concat.min.js" ></script>
+	<script type="text/javascript"  src="../scripts/pulgin/jquery.leanModal.min.js" ></script>
+	<script type="text/javascript"  src="../scripts/pulgin/jquery.fademover.js" ></script>
+	<script type="text/javascript"  src="../scripts/menu.js" ></script>
+	<script type="text/javascript"  src="../scripts/aggregate.js" ></script>
+</head>
+<body>
+	<div class='menu'>
+		<div class='menu-item'>ホーム</div>
+		<div class='menu-item'>履歴</div>
+		<div class='menu-item select'>集計</div>
+		<div class='menu-item'>成績入力</div>
+		<div class='menu-item'>予定</div>
+		<div class='menu-item'>管理</div>
+		<div class='menu-item'>退出</div>
+	</div>
+	<div class='contents'>
+		<span><a rel="leanModal" href="#modal-window"  class='period'>2018年 第5回</a></span>
+		<div class='ranking' id='tablearea'>
+			<table class="sticky_table">
+				<thead>
+			    </thead>
+			    <tbody>
+			    </tbody>
+			</table>
+			<p id="page-top"><a href="#wrap">↑</a></p>
+			<p id="page-bottom"><a href="#wrap">↓</a></p>
+		</div>
+	</div>
+    <div id="modal-window">
+    	<div>
+    		<span class='lbl'>開催年</span><br/>
+			<div class="cp_ipselect cp_sl01">
+				<select required class="year">
+				</select>
+			</div>
+		</div>
+		<div class='btnarea'>
+      		<a href="#" class="square_btn">表示</a>
+		</div>
+		<div class="modal_close"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+DELETE FROM t_schedule WHERE `t_schedule`.`SCHEDULEDATE` = ? AND `t_schedule`.`SCHEDULETIME` = ? AND `t_schedule`.`ACCOUNTID` = ?

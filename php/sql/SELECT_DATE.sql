@@ -1,0 +1,1 @@
+select `HISTORYDATE`,`HISTORYTIME` from t_history where `ACCOUNTID` = ? group by `HISTORYDATE`,`HISTORYTIME` order by `HISTORYDATE` desc,`HISTORYTIME` desc limit 1

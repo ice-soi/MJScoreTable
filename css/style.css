@@ -1,0 +1,207 @@
+@CHARSET "UTF-8";
+/* ***************************************************************
+* WEBﾌｫﾝﾄ
+* ****************************************************************/
+	@font-face {
+	    font-family: 'Aoyanagi';
+	    src: url('../fonts/Aoyanagi.ttf') format('truetype');
+	}
+	@font-face {
+	    font-family: 'Kouzan';
+	    src: url('../fonts/Kouzan.ttf') format('truetype');
+	}
+/* ***************************************************************
+* BODYｽﾀｲﾙ
+* ****************************************************************/
+	body,html {
+		background: url(../images/background.jpg) no-repeat center center fixed;
+	    /*background-size: cover;*/
+	    background-size:75% 80%;
+	    width: 100%;
+	    height: 100%;
+	    margin: 0 auto;
+	    color: #ffffff;
+	    background-color:#030303;
+	}
+	.menu
+	{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		font-family:Kouzan,Aoyanagi;
+		color:white;
+		font-size:2.2em;
+	}
+	.contents
+	{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	 	bottom: 0px;
+	 	left: 0px;
+	 	margin: auto;
+	 	width: 80%;
+	 	height: 60%;
+	}
+/* ***************************************************************
+* ﾒﾆｭｰ選択
+* ****************************************************************/
+	.select
+	{
+		font-weight:bold;
+		color: #ffffff;
+	}
+/* ***************************************************************
+* 次回の日程ｽﾀｲﾙ
+* ****************************************************************/
+	.schedule
+	{
+		font-family:Kouzan,Aoyanagi;
+		color:white;
+		font-size:3em;
+	}
+	.record
+	{
+		font-family:Kouzan,Aoyanagi;
+		color:white;
+		font-size:3em;
+	}
+	.ranking
+	{
+		font-family:Kouzan,Aoyanagi;
+		color:white;
+		font-size:3em;
+	}
+	.rule
+	{
+		font-family:Kouzan,Aoyanagi;
+		color:white;
+		font-size:2.3em;
+		margin-left:40px;
+	}
+	.yakuman
+	{
+		font-family:Kouzan,Aoyanagi;
+		color:white;
+		font-size:2.3em;
+		margin-left:40px;
+	}
+	.home-sch{
+		font-size:0.8em;
+	}
+	.management
+	{
+		font-family:Kouzan,Aoyanagi;
+		color:white;
+		font-size:3em;
+	}
+/* ***************************************************************
+* 現在の順位表ｽﾀｲﾙ
+* ****************************************************************/
+	table.brwsr2
+	{
+		border: none;
+		border-spacing: 0 30px;
+		margin:30px;
+	}
+	table.brwsr2 th
+	{
+		vertical-align: middle;
+		width: 15%;
+		margin: 0;
+		text-align: center;
+	}
+	table.brwsr2 td.data-name
+	{
+		white-space: nowrap;
+		overflow: hidden;
+		width: 65%;
+	}
+	table.brwsr2 td.data-total
+	{
+		white-space: nowrap;
+		overflow: hidden;
+		width: 15%;
+		vertical-align: middle;
+		text-align: center;
+	}
+	table.brwsr2 td.data-top-sub
+	{
+		white-space: nowrap;
+		overflow: hidden;
+		width: 15%;
+		vertical-align: middle;
+		text-align: center;
+	}
+	table.brwsr2 td.header
+	{
+		font-family:Kouzan,Aoyanagi;
+		color:white;
+		font-size:0.7em;
+		vertical-align: middle;
+		text-align: center;
+	}
+	.rule-space
+	{
+		padding-left:40px;
+	}
+/* ***************************************************************
+* ﾒﾆｭｰのｽﾀｲﾙ
+* ****************************************************************/
+	.menu-item
+	{
+		display: inline-block;
+		text-align: center;
+		margin: 0 auto;
+		padding: 0.7em 0.7em 0 0.9em;
+		cursor:pointer;
+		letter-spacing: 2px;
+		position:relative;
+		overflow:hidden;
+		margin: 0 1px;
+		color: #dedede;
+	}
+	.menu-item:before {
+	  content: "";
+	  position: absolute;
+	  width: 0;
+	  background : #fff;
+	  left: 45%;
+	  height: 2px;
+	  bottom: 0;
+	  transition: all .3s;
+	  opacity: 0.7;
+	}
+
+	.menu-item:hover:before {
+	  width: 100%;
+	  left:0;
+	}
+	.menu-item:hover{
+	   color:white;
+	}
+/************************************************************
+* loader
+************************************************************/
+#loading {
+    display: table;
+    width: 100%;
+    height: 100%;
+    /*position: fixed;*/
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    opacity: 0.8;
+    z-index:999;
+}
+#loading .loadingMsg {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 140px;
+    font-size:1.5em;
+    /*background: url("../images/gif-load.gif") center center no-repeat;*/
+}

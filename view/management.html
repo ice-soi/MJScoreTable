@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>MJ Score Table</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../css/pulgin/normalize.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/management.css" />
+	<link rel="stylesheet" href="../css/pulgin/jquery.mCustomScrollbar.css" />
+	<script type="text/javascript"  src="../scripts/pulgin/jquery-1.11.3.min.js" ></script>
+	<script type="text/javascript"  src="../scripts/menu.js" ></script>
+	<script type="text/javascript"  src="../scripts/management.js" ></script>
+	<script type="text/javascript"  src="../scripts/pulgin/jquery.mCustomScrollbar.concat.min.js" ></script>
+	<script type="text/javascript"  src="../scripts/pulgin/jquery.leanModal.min.js" ></script>
+	<script type="text/javascript"  src="../scripts/pulgin/jquery.fademover.js" ></script>
+
+</head>
+<body>
+	<div class='menu'>
+		<div class='menu-item'>ホーム</div>
+		<div class='menu-item'>履歴</div>
+		<div class='menu-item'>集計</div>
+		<div class='menu-item'>成績入力</div>
+		<div class='menu-item'>予定</div>
+		<div class='menu-item select'>管理</div>
+		<div class='menu-item'>退出</div>
+	</div>
+	<div class='contents'>
+		<div class='management-create'><a rel="leanModal" href="#modal-window"  class='period newcreate' id='0'>ユーザーを新規作成する</a></div>
+		<div class="management" id='tablearea'>
+			<table class="management_table">
+			    <tbody>
+			    </tbody>
+			</table>
+			<p id="page-top"><a href="#wrap">↑</a></p>
+			<p id="page-bottom"><a href="#wrap">↓</a></p>
+		</div>
+	</div>
+	<div id="modal-window">
+      	<div class="inputarea">
+      		<span class='lbl'>名前</span><br/>
+      		<input type="text" maxlength="25" class="textbox txt-title" />
+      	</div>
+      	<div class="inputarea">
+      		<span class='lbl'>コメント</span><br/>
+      		<input type="text" maxlength="25" class="textbox txt-remarks" />
+      	</div>
+		<div class='btnarea'>
+			<input type='hidden'  class='playerid' value=''/>
+      		<a href="#" class="square_btn">登録</a>
+      		<a href="#" class="delete_btn">削除</a>
+      		<div class="modal_close" data-vivaldi-spatnav-clickable="1"></div>
+		</div>
+    </div>
+</html>

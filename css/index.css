@@ -1,0 +1,105 @@
+@CHARSET "UTF-8";
+
+@font-face {
+    font-family: 'Aoyanagi';
+    src: url('../fonts/Aoyanagi.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Kouzan';
+    src: url('../fonts/Kouzan.ttf') format('truetype');
+}
+
+body,html
+{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    color: #ffffff;
+    font-family:Kouzan,Aoyanagi,'メイリオ';
+    background-color:#030303;
+}
+.modal
+{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+ 	bottom: 0px;
+ 	left: 0px;
+ 	margin: auto;
+ 	width: 500px;
+ 	height: 600px;
+ 	background-color:#FFFFFF;
+ 	border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+.txtarea
+{
+	padding-top:100px;
+	padding-left:90px;
+	height: 110px;
+	color: #ccc;
+}
+.pwdarea
+{
+	padding-left:90px;
+	height: 120px;
+	color: #ccc;
+}
+.btnarea
+{
+	padding-left:340px;
+	height: 100px;
+	color: #ccc;
+}
+.msgarea
+{
+	padding-left:90px;
+	height: 120px;
+	color: red;
+	font-size:1.5em;
+	font-weight:bold;
+}
+input
+{
+	border:0;
+	padding:10px;
+	font-size:1.3em;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color:#aaa;
+	border:solid 1px #ccc;
+	margin:0 0 20px;
+	width:300px;
+}
+.txt-login
+{
+	font-family:Kouzan,Aoyanagi;
+}
+.pwd-login
+{
+	font-family:'MS明朝';
+	font-size:0.9em;
+}
+.lbl
+{
+	font-size:1.5em;
+}
+.square_btn{
+    display: inline-block;
+    padding: 0.75em 1em;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #FFF;
+    background-image: -webkit-linear-gradient(45deg, #69e071 0%, #b3edaa 100%);
+    background-image: linear-gradient(45deg, #69e071 0%, #b3edaa 100%);
+    transition: .4s;
+    cursor:hand;
+}
+
+.square_btn:hover{
+    background-image: -webkit-linear-gradient(45deg, #69e071 50%, #b3edcf 100%);
+    background-image: linear-gradient(45deg, #69e071 50%, #b3edcf 100%);
+}
