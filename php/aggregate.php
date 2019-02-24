@@ -43,9 +43,14 @@
 		$stYear = $year.'0101';
 		$edYear = $year.'1231';
 
+		if ($year == ''){
+			$stYear = '20000101';
+			$edYear = '20991231';
+		}
+
 		$data = array();
 		// ﾊﾟﾗﾒｰﾀ設定
-		$param = array($accountid,$accountid,$accountid);
+		$param = array($accountid,$stYear,$edYear,$accountid,$accountid,$stYear,$edYear);
 		// SQLの取得
 		$sql = file_get_contents(SELECT_SQL);
 		// 実行処理

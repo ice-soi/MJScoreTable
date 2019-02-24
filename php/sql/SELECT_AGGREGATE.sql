@@ -52,7 +52,12 @@ SELECT RANK.PLAYER,
                                                                 SUM(CAST(t1.`PLAYERRECORD` AS SIGNED) <= CAST(t2.`PLAYERRECORD` AS SIGNED)) as RANK
                     								FROM
                         										`t_history` t1
-                                                    INNER JOIN `t_history` t2 ON t1.`HISTORYDATE` = t2.`HISTORYDATE` AND
+                                                    INNER JOIN (SELECT *
+                                                                    FROM `t_history`
+                                                                   WHERE DATE_FORMAT(`HISTORYDATE`,'%Y-%m-%d') >= DATE_FORMAT(?,'%Y-%01-%01')
+                                                                     AND DATE_FORMAT(`HISTORYDATE`,'%Y-%m-%d') <= DATE_FORMAT(?,'%Y-%12-%31')
+                                                                 ) t2
+                                                             ON t1.`HISTORYDATE` = t2.`HISTORYDATE` AND
                                                  												 t1.`HISTORYTIME` = t2.`HISTORYTIME` AND
                                                  												 t1.`ACCOUNTID` = t2.`ACCOUNTID` AND
                                                                                                  t1.`TIMES` = t2.`TIMES`
@@ -79,6 +84,8 @@ SELECT RANK.PLAYER,
                                 COUNT(PLAYER) as TOTAL
                       FROM `t_history`
                     WHERE `ACCOUNTID` = ?
+                      AND DATE_FORMAT(`HISTORYDATE`,'%Y-%m-%d') >= DATE_FORMAT(?,'%Y-%01-%01')
+                      AND DATE_FORMAT(`HISTORYDATE`,'%Y-%m-%d') <= DATE_FORMAT(?,'%Y-%12-%31')
                      GROUP BY PLAYER
                   ) SCORE
     ON PLAYER.PLAYERCODE = SCORE.PLAYER

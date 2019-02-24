@@ -139,17 +139,30 @@
 		    		$.each($t.datelist,function(i,val){
 		    			_date = val.date.split(' / ').join('');
 		                _time = val.time.split(' : ').join('');
-		    			date += "<option value='" + _date + "_" + _time + "'>" + val.date + " " + val.time + "</option>";
+		                _year = val.year;
+		    			date += "<option class='" + _year + "' value='" + _date + "_" + _time + "'>" + val.date + " " + val.time + "</option>";
 		    		});
 		    	});
 		    	$('.year').html(year);
 		    	$('.date').html(date);
 
 		    	var sel = $('.date');
+		    	$('.year option:last-child').attr('selected', true);
 		    	$('.date option:last-child').attr('selected', true);
 				var opt = sel.find('option:selected').text();
 
 				$('.period').text(opt);
+
+				$('.year').on('change',function(){
+					$y = $(this);
+					$('.date').find('option').css('display','none');
+					$("." + $y.val().toString()).css('display','');
+
+					var sel = $('.date');
+					$('.year option:last-child').attr('selected', true);
+					var opt = sel.find('option:selected').text();
+					$('.period').text(opt);
+				});
 		    },
 		    function(e){
 		    });

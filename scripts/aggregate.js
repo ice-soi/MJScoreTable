@@ -135,7 +135,7 @@
 			    	var json = JSON.parse(ret);
 			    	var html = '';
 
-			    	html += "<option value='0'>総計</option>";
+			    	html += "<option value=''>総計</option>";
 
 			    	$.each(json,function(i,val){
 				    	html += "<option value='" + val.year + "'>" + val.year + "年</option>";

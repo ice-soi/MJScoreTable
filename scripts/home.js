@@ -14,18 +14,23 @@ $(function(){
     	var sch = '';
     	$.each(json,function(i,val){
     		var $t = val;
-    		html += '<tr>';
-    		html += '<td class="header">順位</td>';
-    		html += '<td class="header">';
-    		html += '名前';
-    		html += '</td>';
-    		html += '<td class="header">';
-    		html += '累計';
-    		html += '</td>';
-    		html += '<td class="header">';
-    		html += '差';
-    		html += '</td>';
-    		html += '</tr>';
+
+    		html = '<div>今年はまだ開催されていません</div>';
+
+    		if($t.data.length) {
+    			html = '<tr>';
+        		html += '<td class="header">順位</td>';
+        		html += '<td class="header">';
+        		html += '名前';
+        		html += '</td>';
+        		html += '<td class="header">';
+        		html += '累計';
+        		html += '</td>';
+        		html += '<td class="header">';
+        		html += '差';
+        		html += '</td>';
+        		html += '</tr>';
+			}
 
     		$.each($t.data,function(_i,_v){
     			html += '<tr>';
