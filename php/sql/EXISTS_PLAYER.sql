@@ -1,1 +1,0 @@
-SELECT COUNT(*) FROM `m_player` WHERE ACCOUNTID = ? AND DELFLG = '0'

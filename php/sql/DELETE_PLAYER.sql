@@ -1,1 +1,0 @@
-UPDATE `m_player` SET `DELFLG`='1' WHERE `m_player`.`PLAYERCODE` = ?
