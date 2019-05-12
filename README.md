@@ -18,9 +18,9 @@
 <img src="https://github.com/ice-soi/MJScoreTable/blob/picture/history.jpg" alt="history" title="history" width="450" height="300">  
 　5. 今までの履歴から集計結果を参照できます。  
 <img src="https://github.com/ice-soi/MJScoreTable/blob/picture/aggre.jpg" alt="aggre" title="aggre" width="450" height="300">  
-　6. 次回の開催日を表示します。  
+　6. 次回の開催日を入力、表示します。入力した開催日はホーム画面にも表示されます。  
 <img src="https://github.com/ice-soi/MJScoreTable/blob/picture/sch.jpg" alt="sch" title="sch" width="450" height="300">  
-　7. 参加するユーザを管理します。  
+　7. 参加するユーザを登録、削除できます。  
 <img src="https://github.com/ice-soi/MJScoreTable/blob/picture/manege.jpg" alt="manege" title="manege" width="450" height="300">  
 
 
