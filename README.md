@@ -8,6 +8,10 @@
  - CSS  
 
 ## 概要
+ - ログインユーザごとに結果を集計できます。 
+ - LAMPで開発しています。  
+
+## 画面
 　1. ログインします。  
 <img src="https://github.com/ice-soi/MJScoreTable/blob/picture/login.jpg" alt="login" title="login" width="450" height="300">  
 　2. 当年の合計得点の上位5名を表示します。  
